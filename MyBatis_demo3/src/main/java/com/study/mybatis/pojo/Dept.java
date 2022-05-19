@@ -1,5 +1,7 @@
 package com.study.mybatis.pojo;
 
+import java.util.List;
+
 /**
  * @author RenAshbell
  * @create 2022-05-18-15:53
@@ -9,12 +11,22 @@ public class Dept {
 
     private String deptName;
 
+    private List<Emp> emps;
+
     public Dept() {
     }
 
     public Dept(Integer did, String deptName) {
         this.did = did;
         this.deptName = deptName;
+    }
+
+    public List<Emp> getEmps() {
+        return emps;
+    }
+
+    public void setEmps(List<Emp> emps) {
+        this.emps = emps;
     }
 
     public Integer getDid() {
@@ -38,6 +50,7 @@ public class Dept {
         return "Dept{" +
                 "did=" + did +
                 ", deptName='" + deptName + '\'' +
+                ", emps=" + emps +
                 '}';
     }
 }
